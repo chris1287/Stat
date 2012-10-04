@@ -46,7 +46,8 @@ public:
 
 			dataType diffs;
 			diffs.resize(mData.size());
-			transform(mData.begin(), mData.end(), diffs.begin(), [=](T i){
+			transform(mData.begin(), mData.end(), diffs.begin(), [=](T i)
+			{
 				return pow(i - mAvg, 2);
 			});
 
