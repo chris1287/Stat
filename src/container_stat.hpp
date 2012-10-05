@@ -34,7 +34,6 @@ public:
 
 	container_stat()
 	{
-		mData.resize(0);
 		updateStats();
 	}
 
@@ -44,8 +43,7 @@ public:
 		{
 			mAvg = accumulate(mData.begin(), mData.end(), 0.0) / mData.size();
 
-			dataType diffs;
-			diffs.resize(mData.size());
+			dataType diffs(mData.size(), 0);
 			transform(mData.begin(), mData.end(), diffs.begin(), [=](T i)
 			{
 				return pow(i - mAvg, 2);
