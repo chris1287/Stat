@@ -43,7 +43,7 @@ public:
 		{
 			mAvg = accumulate(mData.begin(), mData.end(), 0.0) / mData.size();
 
-			dataType diffs(mData.size(), 0);
+			dataType diffs(mData.size());
 			transform(mData.begin(), mData.end(), diffs.begin(), [=](T i)
 			{
 				return pow(i - mAvg, 2);
