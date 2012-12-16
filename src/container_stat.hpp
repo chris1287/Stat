@@ -55,7 +55,7 @@ public:
 		}
 		else
 		{
-			mAvg = 0;
+			mAvg    = 0;
 			mStdVar = 0;
 			mStdDev = 0;
 		}
@@ -63,7 +63,7 @@ public:
 
 	T getStdVar() { return mStdVar; }
 	T getStdDev() { return mStdDev; }
-	T getAvg() { return mAvg; }
+	T getAvg()    { return mAvg; }
 
 	void setData(dataType data)
 	{
@@ -72,10 +72,10 @@ public:
 	}
 
 private:
-	dataType mData;
-	T mAvg;
-	T mStdVar;
-	T mStdDev;
+	dataType   mData;
+	T          mAvg;
+	T          mStdVar;
+	T          mStdDev;
 };
 
 }
